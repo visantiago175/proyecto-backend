@@ -38,15 +38,9 @@ public class Canchas {
     @Column(name="precio_referencia")
     private Long precio_referencia;
 
-    // @ManyToOne(fetch = FetchType.LAZY)
-	// @JoinColumn(name="idHorario")
-	// private Horario horario;
 	
 	@Column(name ="disponibilidad", nullable=false)
 	private Boolean disponibilidad;
-
-	// @OneToMany(mappedBy = "cancha", cascade = CascadeType.ALL)
-	// private List<Reserva> Reservas;
 
     public Canchas(String string, String string2, String string3, String string4) {
     }
