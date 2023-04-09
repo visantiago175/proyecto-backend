@@ -29,13 +29,16 @@ public class AdministradorTest {
                     cantidad ++;
                 }
 
-                Administrador administradores1 = new Administrador("jota mario", "elCampin", "./resources/images/messirve.jpg");
+                Administrador administradores1 = new Administrador();
+                administradores1.setGeneral("jota mario", "elCampin", "./resources/images/messirve.jpg");
                 adminRepo.save(administradores1);
 
-                Administrador administradores2 = new Administrador("tom delonge", " blink", "./src/main/resources/images/Tom-DeLonge-Boomer.jpg");
+                Administrador administradores2 = new Administrador();
+                administradores1.setGeneral("tom delonge", "blink", "./src/main/resources/images/Tom-DeLonge-Boomer.jpg");
                 adminRepo.save(administradores2);
 
-                Administrador administradores3 = new Administrador("Leonel Messi", "radioUno", "./src/main/resources/images/messirve.jpg");
+                Administrador administradores3 =  new Administrador();
+                administradores3.setGeneral("Leonel Messi", "radioUno", "./src/main/resources/images/messirve.jpg");
                 adminRepo.save(administradores3);
 
                 administradores = adminRepo.findAll().iterator();

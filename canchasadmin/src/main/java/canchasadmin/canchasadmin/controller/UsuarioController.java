@@ -1,24 +1,22 @@
 package canchasadmin.canchasadmin.controller;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import canchasadmin.canchasadmin.service.ReservaServicio;
+import canchasadmin.canchasadmin.service.UsuarioServicio;
 
-@Controller
-public class ReservaController {
-    
+
+@controller
+public class UsuarioController {
     @Autowired
-    private ReservaServicio servicio;
+    private UsuarioServicio servicio;
 
     @CrossOrigin
-    @GetMapping(value =  "/Administradores")
+    @GetMapping(value =  "/Usuarios")
     public String listarCanchas(Model model){
-        model.addAttribute("Reservas", servicio.listarReservas());
-        return "Reservas";
+        model.addAttribute("Usuarios", servicio.listarUsuarios());
+        return "Usuarios";
     }
-
 }

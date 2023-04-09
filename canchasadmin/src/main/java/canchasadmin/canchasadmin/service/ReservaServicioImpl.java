@@ -17,7 +17,7 @@ public class ReservaServicioImpl implements ReservaServicio{
     @Override
     public List<Reserva> listarReservas() {
         
-        return repository.findAll();
+        return (List<Reserva>) repository.findAll();
     }
     
 }

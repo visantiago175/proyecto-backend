@@ -8,9 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "administrador")
-public class Administrador {
-
+@Table(name = "Usuario")
+public class Usuario {
+    
     /**
      *
      */
@@ -21,14 +21,15 @@ public class Administrador {
     @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "establecimiento")
-    private String establecimiento;
+    @Column(name = "correo")
+    private String correo;
 
     @Column(name = "image_url", nullable = false)
     private String imageUrl;
 
     @Column(name = "contraseña")
     private String contraseña;
+
 
     public String getNombre() {
         return nombre;
@@ -38,12 +39,12 @@ public class Administrador {
         this.nombre = nombre;
     }
 
-    public String getEstablecimiento() {
-        return establecimiento;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setEstablecimiento(String establecimiento) {
-        this.establecimiento = establecimiento;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     public String getImageUrl() {
@@ -62,18 +63,17 @@ public class Administrador {
         this.contraseña = contraseña;
     }
 
-    public void Administrador(String nombre, String establecimiento, String imageUrl, String contraseña){
+    public void Administrador(String nombre, String correo, String imageUrl, String contraseña){
         this.nombre = nombre;
-        this.establecimiento = establecimiento;
         this.imageUrl = imageUrl;
         this.contraseña = contraseña;
+        this.correo = correo;
     }
 
-    public void setGeneral(String nombre, String establecimiento, String imageUrl, String contraseña){
+    public void setGeneral(String nombre, String correo, String imageUrl, String contraseña){
         this.nombre = nombre;
-        this.establecimiento = establecimiento;
+        this.correo = correo;
         this.imageUrl = imageUrl;
         this.contraseña = contraseña;
     }
-    
 }
