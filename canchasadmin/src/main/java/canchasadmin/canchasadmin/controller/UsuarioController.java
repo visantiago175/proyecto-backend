@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import canchasadmin.canchasadmin.service.UsuarioServicio;
 
 
-@controller
+@Controller
 public class UsuarioController {
     @Autowired
     private UsuarioServicio servicio;

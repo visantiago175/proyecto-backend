@@ -30,15 +30,15 @@ public class AdministradorTest {
                 }
 
                 Administrador administradores1 = new Administrador();
-                administradores1.setGeneral("jota mario", "elCampin", "./resources/images/messirve.jpg");
+                administradores1.setGeneral("jota mario", "elCampin", "./src/main/resources/images/messirve.jpg", "aguacate123");
                 adminRepo.save(administradores1);
 
                 Administrador administradores2 = new Administrador();
-                administradores1.setGeneral("tom delonge", "blink", "./src/main/resources/images/Tom-DeLonge-Boomer.jpg");
+                administradores1.setGeneral("tom delonge", "blink", "./src/main/resources/images/Tom-DeLonge-Boomer.jpg", "imissyou123");
                 adminRepo.save(administradores2);
 
                 Administrador administradores3 =  new Administrador();
-                administradores3.setGeneral("Leonel Messi", "radioUno", "./src/main/resources/images/messirve.jpg");
+                administradores3.setGeneral("Leonel Messi", "radioUno", "./src/main/resources/images/messirve.jpg", "futbol123");
                 adminRepo.save(administradores3);
 
                 administradores = adminRepo.findAll().iterator();

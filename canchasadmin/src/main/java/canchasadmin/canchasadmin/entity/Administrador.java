@@ -24,6 +24,9 @@ public class Administrador {
     @Column(name = "establecimiento")
     private String establecimiento;
 
+    @Column(name = "Correo")
+    private String correo;
+
     @Column(name = "image_url", nullable = false)
     private String imageUrl;
 
@@ -36,6 +39,14 @@ public class Administrador {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     public String getEstablecimiento() {

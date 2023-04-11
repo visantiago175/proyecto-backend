@@ -28,7 +28,7 @@ public class Reserva implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="idCancha")
-	private Canchas cancha;
+	private Canchas idCancha;
 	
 	
 
@@ -38,7 +38,7 @@ public class Reserva implements Serializable{
 	private Date fechaReserva;
 
 	@Column(name ="estadoReserva", nullable=false)
-	private Boolean estadoReserva; 
+	private Boolean estadoReserva;
 	
 	
 	public Reserva() {
@@ -56,11 +56,11 @@ public class Reserva implements Serializable{
 	}
 
 	public Canchas getCancha() {
-		return cancha;
+		return idCancha;
 	}
 
 	public void setCancha(Canchas cancha) {
-		this.cancha = cancha;
+		this.idCancha = cancha;
 	}
 
 	public Date getFechaReserva() {
@@ -79,6 +79,18 @@ public class Reserva implements Serializable{
 	public void setEstadoReserva(Boolean estadoReserva) {
 		this.estadoReserva = estadoReserva;
 	}
+
+	public void Reserva(Canchas Canchas, Date fechaReserva, Boolean estadoReserva){
+        this.idCancha = Canchas;
+        this.fechaReserva = fechaReserva;
+        this.estadoReserva = estadoReserva;
+    }
+
+    public void setGeneral(Canchas Canchas, Date fechaReserva, Boolean estadoReserva){
+        this.idCancha = Canchas;
+        this.fechaReserva = fechaReserva;
+        this.estadoReserva = estadoReserva;
+    }
 
 	
 	
