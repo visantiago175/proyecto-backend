@@ -15,8 +15,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import canchasadmin.canchasadmin.service.Canchas;
-
 @Entity
 @Table(name = "Establecimineto")
 public class Establecimineto {

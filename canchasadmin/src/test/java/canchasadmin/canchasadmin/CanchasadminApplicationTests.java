@@ -27,16 +27,16 @@ class CanchasadminApplicationTests {
                     cantidad ++;
                 }
 
-                Canchas cancha = new Canchas("elCampin", "cancha grande para partidos con muchos jugadores", "./src/main/resources/images/elCampin.jpeg", "100000");
-                //cancha.setValores("elCampin", "cancha grande para partidos con muchos jugadores", "elCampin.jpg", "100000");
+                Canchas cancha = new Canchas();
+                cancha.setValores("elCampin", "cancha grande para partidos con muchos jugadores", "12000");
                 canchasrepo.save(cancha);
 
-                Canchas cancha2 = new Canchas("blink", "cancha mediana para partidos con una cantidad moderada de jugadores", "./src/main/resources/images/blink.jpg", "80000");
-                //cancha2.setValores("blink", "cancha mediana para partidos con una cantidad moderada de jugadores", "blink.jpg", "80000");
+                Canchas cancha2 = new Canchas();
+                cancha2.setValores("elCampin", "cancha grande para partidos con muchos jugadores", "4000");
                 canchasrepo.save(cancha2);
 
-                Canchas cancha3 = new Canchas("radioUno", "cancha pequeña para partidos con pocos jugadores", "./src/main/resources/images/radioUno.jpg", "50000");
-                //cancha3.setValores("radioUno", "cancha pequeña para partidos con pocos jugadores", "radioUno.jpg", "50000");
+                Canchas cancha3 = new Canchas();
+                cancha3.setValores("radioUno", "cancha pequeña para partidos con pocos jugadores",  "50000");
                 canchasrepo.save(cancha3);
 
                 canchas = canchasrepo.findAll().iterator();

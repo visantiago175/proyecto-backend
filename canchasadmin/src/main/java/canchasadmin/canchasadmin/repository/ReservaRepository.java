@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import canchasadmin.canchasadmin.entity.Reserva;
 
 @Repository
-public interface ReservaRepository extends CrudRepository <Reserva, Long> {
+public interface ReservaRepository  extends CrudRepository <Reserva, Long>{
     
 }

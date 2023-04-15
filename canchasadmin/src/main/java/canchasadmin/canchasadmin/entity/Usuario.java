@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "Usuario")
 public class Usuario {
@@ -63,7 +64,10 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    public void Administrador(String nombre, String correo, String imageUrl, String contraseña){
+    public Usuario(){
+    }
+
+    public Usuario (String nombre, String correo, String imageUrl, String contraseña){
         this.nombre = nombre;
         this.imageUrl = imageUrl;
         this.contraseña = contraseña;
@@ -76,4 +80,5 @@ public class Usuario {
         this.imageUrl = imageUrl;
         this.contraseña = contraseña;
     }
+
 }

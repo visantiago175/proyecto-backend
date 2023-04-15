@@ -9,7 +9,7 @@ import canchasadmin.canchasadmin.entity.Usuario;
 import canchasadmin.canchasadmin.repository.UsuarioRepository;
 
 @Service
-public class UsusarioServicioImpl implements UsuarioServicio{
+public class UsuarioServicioImpl implements UsuarioServicio{
 
     @Autowired
     private UsuarioRepository repository;

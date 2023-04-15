@@ -13,7 +13,7 @@ public class EstServicioImpl implements EstServicio{
     private EstablecimientoRepository repository;
 
     @Override
-    public Iterable<Establecimineto> listarCanchas() {
+    public Iterable<Establecimineto> listarEstablecimiento() {
         return repository.findAll();
     }
         

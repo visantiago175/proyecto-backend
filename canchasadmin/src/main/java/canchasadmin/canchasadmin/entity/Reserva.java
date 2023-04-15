@@ -39,13 +39,6 @@ public class Reserva implements Serializable{
 
 	@Column(name ="estadoReserva", nullable=false)
 	private Boolean estadoReserva;
-	
-	
-	public Reserva() {
-		
-		this.estadoReserva = true;
-		
-	}
 
 	public int getIdReserva() {
 		return idReserva;
@@ -80,7 +73,10 @@ public class Reserva implements Serializable{
 		this.estadoReserva = estadoReserva;
 	}
 
-	public void Reserva(Canchas Canchas, Date fechaReserva, Boolean estadoReserva){
+	public Reserva(){
+    }
+
+	public Reserva(Canchas Canchas, Date fechaReserva, Boolean estadoReserva){
         this.idCancha = Canchas;
         this.fechaReserva = fechaReserva;
         this.estadoReserva = estadoReserva;
@@ -91,6 +87,11 @@ public class Reserva implements Serializable{
         this.fechaReserva = fechaReserva;
         this.estadoReserva = estadoReserva;
     }
+
+	public void EstadoReserva(boolean estado) {
+		this.estadoReserva = estado;
+		
+	}
 
 	
 	

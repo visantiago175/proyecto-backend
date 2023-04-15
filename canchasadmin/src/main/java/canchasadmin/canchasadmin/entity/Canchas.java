@@ -28,11 +28,7 @@ public class Canchas {
     private String imageUrl;
 
     @Column(name="precio_referencia")
-    private Long precio_referencia;
-
-	
-	@Column(name ="disponibilidad", nullable=false)
-	private Boolean disponibilidad;
+    private String precio_referencia;
 
     public Canchas(String string, String string2, String string3, String string4) {
     }
@@ -77,26 +73,28 @@ public class Canchas {
         this.establecimiento = establecimiento;
     }
 
-    public Long getPrecio_referencia() {
+    public String getPrecio_referencia() {
         return precio_referencia;
     }
 
-    public void setPrecio_referencia(Long precio_referencia) {
+    public void setPrecio_referencia(String precio_referencia) {
         this.precio_referencia = precio_referencia;
     }   
 
-    public void cancha(Long id, String nombre, String descripcion, String imageUrl, Long precio_referencia) {
+    public Canchas(){
+    }
+
+    public Canchas(String nombre, String descripcion, /*String imageUrl,*/ String precio_referencia) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.imageUrl = imageUrl;
+        //this.imageUrl = imageUrl;
         this.precio_referencia = precio_referencia;
     }
 
-    public void setValores(Long id, String nombre, String descripcion, String imageUrl, Long precio_referencia) {
+    public void setValores(String nombre, String descripcion,  /*String imageUrl,*/String precio_referencia) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.imageUrl = imageUrl;
-        this.precio_referencia = precio_referencia;
+        //this.imageUrl = imageUrl;
     }
 
 }

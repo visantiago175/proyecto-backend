@@ -11,6 +11,7 @@ import canchasadmin.canchasadmin.repository.ReservaRepository;
 @Service
 public class ReservaServicioImpl implements ReservaServicio{
 
+
     @Autowired
     private ReservaRepository repository;
 
@@ -18,6 +19,16 @@ public class ReservaServicioImpl implements ReservaServicio{
     public List<Reserva> listarReservas() {
         
         return (List<Reserva>) repository.findAll();
+    }
+
+    @Override
+    public void crearReserva(Reserva reserva){
+     repository.save(reserva);
+    }
+
+    @Override
+    public void cancelarReserva(Reserva reserva) {
+        repository.delete(reserva);
     }
     
 }
