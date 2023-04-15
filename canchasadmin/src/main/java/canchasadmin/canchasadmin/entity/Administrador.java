@@ -73,7 +73,7 @@ public class Administrador {
         this.contraseña = contraseña;
     }
 
-    public void Administrador(String nombre, String establecimiento, String imageUrl, String contraseña){
+    public Administrador(String nombre, String establecimiento, String imageUrl, String contraseña){
         this.nombre = nombre;
         this.establecimiento = establecimiento;
         this.imageUrl = imageUrl;

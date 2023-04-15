@@ -4,16 +4,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import canchasadmin.canchasadmin.entity.Administrador;
 import canchasadmin.canchasadmin.repository.AdminRepository;
+import canchasadmin.canchasadmin.repository.UsuarioRepository;
 
 public class LoginServicioImpl implements LoginServicio{
 
     @Autowired
     private AdminRepository adminRepository;
 
+    @Autowired
+    private UsuarioRepository UsRepository;
+
     @Override
-    public Iterable<Administrador> recuperarContraseña() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'recuperarContraseña'");
+    public String recuperarContraseña(String correo) {
+
+        Administrador admin = adminRepository.findByCorreo(correo);
+
+        String contraseña = admin.getContraseña();
+
+        return contraseña;
     }
 
     @Override

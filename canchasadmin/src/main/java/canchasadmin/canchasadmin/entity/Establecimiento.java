@@ -1,23 +1,18 @@
 package canchasadmin.canchasadmin.entity;
 
-
-import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Establecimineto")
-public class Establecimineto {
+public class Establecimiento {
 
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +23,7 @@ public class Establecimineto {
 	private String nombre;
 
     @OneToMany(mappedBy = "Establecimineto", cascade = CascadeType.ALL)
-	private List<Canchas> canchas;
+	private int idCanchas;
 
     public int getId() {
         return id;
@@ -38,11 +33,6 @@ public class Establecimineto {
         this.id = id;
     }
 
- 
-    public Establecimineto() {
-		
-	}
-
     public String getNombre() {
         return nombre;
     }
@@ -51,17 +41,21 @@ public class Establecimineto {
         this.nombre = nombre;
     }
 
-	public List<Canchas> getCanchas() {
-		return canchas;
+	public int getCanchas() {
+		return this.idCanchas;
 	}
 
-	public void setCanchas(List<Canchas> canchas) {
-		canchas = canchas;
-	}
+    public Establecimiento(){
+    }
 
-    public void setGeneral(String nombre, Canchas cancha){
+    public Establecimiento(String nombre, int idCancha){
         this.nombre = nombre;
-        this.canchas = (List<Canchas>) cancha;
+        this.idCanchas = idCancha;
+    }
+
+    public void setGeneral(String nombre, int idCancha){
+        this.nombre = nombre;
+        this.idCanchas = idCancha;
     }
     
 

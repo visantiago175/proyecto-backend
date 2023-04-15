@@ -4,7 +4,7 @@ import canchasadmin.canchasadmin.entity.Administrador;
 
 public interface LoginServicio {
 
-    public Iterable<Administrador> recuperarContraseña();
+    public String recuperarContraseña(String correo);
     public Iterable<Administrador> autenticacion();
     
 }

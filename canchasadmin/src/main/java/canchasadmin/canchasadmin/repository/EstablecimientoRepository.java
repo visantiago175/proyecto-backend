@@ -1,9 +1,11 @@
 package canchasadmin.canchasadmin.repository;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import canchasadmin.canchasadmin.entity.Establecimineto;
+import canchasadmin.canchasadmin.entity.Establecimiento;
 
-public interface EstablecimientoRepository extends CrudRepository <Establecimineto, Long> {
+@Repository
+public interface EstablecimientoRepository extends CrudRepository <Establecimiento, Long> {
     
 }

@@ -7,5 +7,5 @@ import canchasadmin.canchasadmin.entity.Administrador;
 
 @Repository
 public interface AdminRepository extends CrudRepository<Administrador, Long> {
-    
+    public Administrador findByCorreo(String correo);
 }

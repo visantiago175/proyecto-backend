@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import canchasadmin.canchasadmin.entity.Establecimineto;
+import canchasadmin.canchasadmin.entity.Establecimiento;
 import canchasadmin.canchasadmin.repository.EstablecimientoRepository;
 
 public class EstServicioImpl implements EstServicio{
@@ -13,7 +13,7 @@ public class EstServicioImpl implements EstServicio{
     private EstablecimientoRepository repository;
 
     @Override
-    public Iterable<Establecimineto> listarEstablecimiento() {
+    public Iterable<Establecimiento> listarEstablecimiento() {
         return repository.findAll();
     }
         

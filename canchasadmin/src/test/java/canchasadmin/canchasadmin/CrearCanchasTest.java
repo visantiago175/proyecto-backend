@@ -9,7 +9,7 @@ import canchasadmin.canchasadmin.repository.CanchasRepository;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest (classes = Canchas.class)
-class CanchasadminApplicationTests {
+class crearCanchasTest {
 
 	@Autowired
     private CanchasRepository canchasrepo;
