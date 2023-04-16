@@ -1,4 +1,5 @@
 package canchasadmin.canchasadmin.entity;
+import java.sql.Time;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,6 +7,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "canchas")
@@ -30,7 +35,31 @@ public class Canchas {
     @Column(name="precio_referencia")
     private String precio_referencia;
 
-    public Canchas(String string, String string2, String string3, String string4) {
+    @Temporal(TemporalType.DATE)	
+	@DateTimeFormat(pattern = "HH-mm")
+	@Column(name ="fechaReserva", nullable=false)
+	private Time horaApertura;
+
+    public Time getHoraApertura() {
+        return horaApertura;
+    }
+
+    public void setHoraApertura(Time horaApertura) {
+        this.horaApertura = horaApertura;
+    }
+
+    @Temporal(TemporalType.DATE)	
+	@DateTimeFormat(pattern = "HH-mm")
+	@Column(name ="fechaReserva", nullable=false)
+	private Time horaCierre;
+
+
+    public Time getHoraCierre() {
+        return horaCierre;
+    }
+
+    public void setHoraCierre(Time horaCierre) {
+        this.horaCierre = horaCierre;
     }
 
     public Long getId() {
@@ -84,17 +113,22 @@ public class Canchas {
     public Canchas(){
     }
 
-    public Canchas(String nombre, String descripcion, /*String imageUrl,*/ String precio_referencia) {
+    public Canchas(String nombre, String descripcion, String imageUrl, String precio_referencia, Time horaApertura , Time horaCierre){
         this.nombre = nombre;
         this.descripcion = descripcion;
         //this.imageUrl = imageUrl;
         this.precio_referencia = precio_referencia;
+        this.horaApertura = horaApertura;
+        this.horaCierre = horaCierre;
     }
 
-    public void setValores(String nombre, String descripcion,  /*String imageUrl,*/String precio_referencia) {
+    public void setValores(String nombre, String descripcion, String imageUrl, String precio_referencia, Time horaApertura , Time horaCierre){
         this.nombre = nombre;
         this.descripcion = descripcion;
         //this.imageUrl = imageUrl;
+        this.precio_referencia = precio_referencia;
+        this.horaApertura = horaApertura;
+        this.horaCierre = horaCierre;
     }
 
 }

@@ -7,5 +7,4 @@ import canchasadmin.canchasadmin.entity.Administrador;
 public interface AdminServicio {
 
     public List<Administrador> listarAdmins();
-    public void agregarCancha();
 }

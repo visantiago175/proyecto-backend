@@ -25,9 +25,17 @@ public class LoginServicioImpl implements LoginServicio{
     }
 
     @Override
-    public Iterable<Administrador> autenticacion() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'autenticacion'");
+    public boolean autenticacion(String correo, String contraseña) {
+
+        boolean autenticacion = false;
+
+        Administrador admin = adminRepository.findByCorreo(correo);
+
+        if(contraseña == admin.getContraseña()){
+            autenticacion = true;
+        }
+
+        return autenticacion; 
     }
     
 }

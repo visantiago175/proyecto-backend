@@ -19,11 +19,5 @@ public class AdminServicioImpl implements AdminServicio {
         
         return (List<Administrador>) repositorio.findAll();
     }
-
-    @Override
-    public void agregarCancha() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'agregarCancha'");
-    }
     
 }
