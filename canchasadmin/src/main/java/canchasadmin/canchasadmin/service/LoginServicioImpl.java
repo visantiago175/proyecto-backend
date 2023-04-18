@@ -4,15 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import canchasadmin.canchasadmin.entity.Administrador;
 import canchasadmin.canchasadmin.repository.AdminRepository;
-import canchasadmin.canchasadmin.repository.UsuarioRepository;
+// import canchasadmin.canchasadmin.repository.UsuarioRepository;
 
 public class LoginServicioImpl implements LoginServicio{
 
     @Autowired
     private AdminRepository adminRepository;
 
-    @Autowired
-    private UsuarioRepository UsRepository;
+    // @Autowired
+    // private UsuarioRepository UsRepository;
 
     @Override
     public String recuperarContraseña(String correo) {
